@@ -4,12 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -D_ANDROID_
 
-LOCAL_C_INCLUDES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
-                    $(TARGET_OUT_HEADERS)/common/inc \
-                    $(TOP)/vendor/qcom/proprietary/securemsm-internal/test_service/interface \
-                    $(TOP)/vendor/qcom/proprietary/securemsm-internal/test_service/server \
-
-LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/interface \
+                    $(LOCAL_PATH)/server \
 
 LOCAL_SHARED_LIBRARIES := \
         libcutils \
